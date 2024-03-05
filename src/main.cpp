@@ -1,8 +1,11 @@
 #include <iostream>
+#include <ctime>
 
 using namespace std;
 
 int main () {
+
+    srand(time(NULL));
     
     int TotalBullet, BulletPosition, Shoot, TotalPlayers;
     bool alive = true;
@@ -19,6 +22,7 @@ int main () {
             cout << "Hora do player " << i << " ..." << endl;
             cout << "Digite um número entre 1 e " << TotalBullet << " para atirar: ";
             cin >> Shoot;
+            
             if(Shoot < 1 || Shoot > 6) {
                 cout << "Opção inválida!" << endl;
                 break;
